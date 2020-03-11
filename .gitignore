@@ -1,0 +1,33 @@
+config-cache/
+libs/
+.classpath/
+.externalToolBuilders/
+.project/
+.settings/
+build/
+.idea/
+logs/
+target/
+doc/
+out/
+bin/
+*.iml
+*.orig
+*~
+*.tmp
+log/
+logs/
+
+#####################################
+# Copy from https://github.com/github/gitignore/
+# Ignore java and scala output files.
+#####################################
+*.class
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+# Package Files #
+*.war
+*.ear
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+@logPath@
