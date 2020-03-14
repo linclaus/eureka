@@ -3,7 +3,9 @@ libs/
 .classpath/
 .externalToolBuilders/
 .project/
+.vscode/
 .settings/
+*.project
 build/
 .idea/
 logs/
@@ -11,6 +13,7 @@ target/
 doc/
 out/
 bin/
+*.classpath
 *.iml
 *.orig
 *~

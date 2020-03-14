@@ -26,19 +26,12 @@ public class HelloController {
 
     @RequestMapping(value = "/discovery", method = RequestMethod.GET)
     public String index() {
-        StringBuilder buf = new StringBuilder();
-        List<String> serviceIds = discoveryClient.getServices();
+        final StringBuilder buf = new StringBuilder();
+        final List<String> serviceIds = discoveryClient.getServices();
         if(!CollectionUtils.isEmpty(serviceIds)){
-            for(String s : serviceIds){
-                System.out.println("serviceId:" + s);
-                List<ServiceInstance> serviceInstances =  discoveryClient.getInstances(s);
-                if(!CollectionUtils.isEmpty(serviceInstances)){
-                    for(ServiceInstance si:serviceInstances){
-                        buf.append("["+si.getServiceId() +" host=" +si.getHost()+" port="+si.getPort()+" uri="+si.getUri()+"]");
-                    }
-                }else{
-                    buf.append("no service.");
-                }
+            for(String s:serviceIds){
+                logger.info(s);
+                buf.append("["+s+"]");
             }
         }
         return buf.toString();
